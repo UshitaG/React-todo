@@ -63,6 +63,9 @@ app.get("/todo", (req, res) => {
 
 const PORT = 5000;
 
-app.listen(PORT, () => {
+app.listen(PORT, (err, resp) => {
+  if (err) {
+    console.log(`Error ${err}`);
+  }
   console.log(`server on port ${PORT}`);
 });

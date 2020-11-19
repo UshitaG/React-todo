@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-image: linear-gradient(180deg, #334d4d 0%, #bdd4e7 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+}
+label {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header,
+form {
+  min-height: 20vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+form input {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  border: none;
+  background: white;
+  color: #334d4d;
+}
+form button {
+  padding: 0.3rem;
+  font-size: 1.5rem;
+  color: #334d4d;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #334d4d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-text {
+  padding: 0rem 0em;
+  font-size: 0.8em;
+  font-family: "Poppins", sans-serif;
+  margin-left: 0.6rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: #334d4d;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.todo-list {
+  min-width: 70%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.3rem;
+  color: #334d4d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+.filter-todo {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn,
+.edit-btn {
+  background: #cc0000;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.tick {
+  background: rgb(3, 221, 156);
+}
+.question {
+  background: #264d00;
+}
+
+.edit-btn {
+  background: #334d4d;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #334d4d;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 15rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8rem;
+  background: #334d4d;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+*/ .my-popup-content {
+  margin: auto;
+  color: #334d4d;
+  font-family: "Poppins", sans-serif;
+
+  width: 100%;
+  padding: 5px;
+}
+.my-popup-arrow {
+  color: rgb(255, 255, 255);
+}
+[role="tooltip"].my-popup-content {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.my-popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup="tooltip"].my-popup-overlay {
+  background: transparent;
 }

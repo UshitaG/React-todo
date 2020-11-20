@@ -15,4 +15,4 @@ Step 4 : npm run server
          Open another terminal at the location the React-todo folder
          npm start
 
-This site is also hosted at "https://to-do-ushita.herokuapp.com/"
+This React site is also hosted at "https://to-do-ushita.herokuapp.com/".
